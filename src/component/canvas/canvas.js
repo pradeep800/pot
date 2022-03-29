@@ -5,7 +5,7 @@ export default function Canvas() {
     console.log(canvas);
     const ctx = canvas.getContext("2d");
     let pa = [];
-    canvas.width = window.innerWidth - 10;
+    canvas.width = window.innerWidth;
     canvas.height = 80;
     window.addEventListener("resize", () => {
       canvas.width = window.innerWidth;
@@ -58,6 +58,6 @@ export default function Canvas() {
   });
 
   return (
-    <canvas id="canvas" className="absolute border-4  border-sky-500"></canvas>
+    <canvas id="canvas" className="absolute border-2  border-sky-500"></canvas>
   );
 }
