@@ -23,7 +23,7 @@ export default function Blog() {
   return (
     <div className="relative bg-gray-300  ">
       {!load && <Spinner>Loading...</Spinner>}
-      {load && (
+      {load && obj.img && (
         <div>
           <img
             src={obj.img}

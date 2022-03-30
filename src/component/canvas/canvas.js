@@ -60,7 +60,7 @@ export default function Canvas() {
   return (
     <canvas
       id="canvas"
-      className="absolute border-2  border-sky-500 top-[10vh] z-30 left-[5vh]"
+      className="relative border-2  border-sky-500 h-[80vh] w-[80vw]"
     ></canvas>
   );
 }
