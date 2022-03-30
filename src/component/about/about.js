@@ -10,7 +10,7 @@ export default function About() {
         <div className="flex flex-col items-center pt-[30px]">
           <img src={img} className="w-[200px]"></img>
           <p className="text-xl pt-[10vh] font-black font-mono text-black-500 text-center w-[100vw] ">
-            hi i am Pradeep singh bisht
+            hi i am Pradeep bisht
           </p>
         </div>
       </div>
