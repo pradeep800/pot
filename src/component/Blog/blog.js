@@ -2,12 +2,19 @@ import { useEffect, useRef, useState } from "react";
 import temp from "./blog_data";
 import img from "./1.jpg";
 export default function Blog() {
-  const [obj, setobj] = useState({ img: "" });
+  const [obj, setobj] = useState({
+    img: "",
+    title: "",
+    upload: "",
+    created: "",
+    para: ["a", "b", "c"],
+  });
   useEffect(() => {
     temp().then((result) => {
       setobj(result);
     });
   }, []);
+  console.log(obj);
   return (
     <div className="relative">
       <img
