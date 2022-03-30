@@ -34,8 +34,8 @@ export default function Blog() {
             <h1 className="text-center text-4xl font-black  text-pink-600">
               {obj.title}
             </h1>
-            <p className="p-4"></p>
-            <div className="flex justify-between  text-red-400 text-1xl font-mono pl-4 ">
+            <p className="sm:p-4 p-1"></p>
+            <div className="flex justify-between text-red-400 text-1xl font-mono  ">
               <p>
                 <span>Upload date</span>:- {obj.upload}
               </p>
