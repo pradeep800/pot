@@ -37,7 +37,7 @@ export default function Blog() {
           </p>
         </div>
       </div>
-      <div className="sm:ml-[10vh] text-justify sm:mr-[10vh] font-red tracking-wide leading-10">
+      <div className="mx-6 sm:ml-[10vh]  text-justify sm:mr-[10vh] font-red tracking-wide leading-10">
         <div className="indent-8">{obj.para[0]}</div>
         <p className="m-4"></p>
         <div className="indent-8">{obj.para[1]}</div>
