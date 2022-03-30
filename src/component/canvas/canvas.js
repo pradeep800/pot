@@ -5,11 +5,11 @@ export default function Canvas() {
     console.log(canvas);
     const ctx = canvas.getContext("2d");
     let pa = [];
-    canvas.width = window.innerWidth;
-    canvas.height = 80;
+    canvas.width = window.innerWidth - 80;
+    canvas.height = 400;
     window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = 80;
+      canvas.width = window.innerWidth - 80;
+      canvas.height = 400;
     });
 
     class Particle {
@@ -58,6 +58,9 @@ export default function Canvas() {
   });
 
   return (
-    <canvas id="canvas" className="absolute border-2  border-sky-500"></canvas>
+    <canvas
+      id="canvas"
+      className="absolute border-2  border-sky-500 top-[10vh] z-30 left-[5vh]"
+    ></canvas>
   );
 }

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Spinner from "../spinner/spinner";
 import temp from "./blog_data";
 export default function Blog() {
@@ -35,7 +35,7 @@ export default function Blog() {
               {obj.title}
             </h1>
             <p className="sm:p-4 p-1"></p>
-            <div className="flex justify-between text-red-400 text-1xl font-mono  ">
+            <div className="flex justify-between text-red-400 text-1xl font-mono ">
               <p>
                 <span>Upload date</span>:- {obj.upload}
               </p>
@@ -45,11 +45,11 @@ export default function Blog() {
               </p>
             </div>
           </div>
-          <div className="   min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	 sm:text-xl mx-[12px] text-justify sm:mr-[10vh]  ">
+          <div className="   mt-4 sm:mt-8 min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	 sm:text-xl mx-[12px] text-justify sm:mr-[10vh]  ">
             {obj.para.map((value, index) => {
               return (
                 <div key={index}>
-                  <div className="indent-4">{value}</div>
+                  <div className="indent-4 mt-4">{value}</div>
                 </div>
               );
             })}
