@@ -21,7 +21,7 @@ export default function Blog() {
   console.log(obj);
 
   return (
-    <div className="relative">
+    <div className="relative bg-gray-300  ">
       {!load && <Spinner>Loading...</Spinner>}
       {load && (
         <div>
@@ -37,15 +37,15 @@ export default function Blog() {
             <p className="p-4"></p>
             <div className="flex justify-between  text-red-400 text-1xl font-mono pl-4 ">
               <p>
-                <span>upload date</span>:- {obj.upload}
+                <span>Upload date</span>:- {obj.upload}
               </p>
 
               <p>
-                <span>author name</span>:- {obj.author}
+                <span>Author name</span>:- {obj.author}
               </p>
             </div>
           </div>
-          <div className="mx-8  sm:ml-[10vh]  text-justify sm:mr-[10vh] font-red tracking-wide leading-10">
+          <div className="mx-8  sm:ml-[10vh] text-[1rem] sm:text-xl text-justify sm:mr-[10vh] font-red tracking-wide sm:leading-10 leading-4">
             {obj.para.map((value, index) => {
               return (
                 <div key={index}>
