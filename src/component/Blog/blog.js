@@ -16,7 +16,7 @@ export default function Blog() {
     });
   }, []);
   useEffect(() => {
-    setTimeout(setLoaded, 800, true);
+    setTimeout(setLoaded, 1000, true);
   }, [obj]);
   console.log(obj);
 
