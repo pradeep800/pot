@@ -45,11 +45,11 @@ export default function Blog() {
               </p>
             </div>
           </div>
-          <div className="mx-8   min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	 sm:text-xl text-justify sm:mr-[10vh]  ">
+          <div className="   min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	 sm:text-xl mx-[12px] text-justify sm:mr-[10vh]  ">
             {obj.para.map((value, index) => {
               return (
                 <div key={index}>
-                  <div className="indent-4 m-4">{value}</div>
+                  <div className="indent-4">{value}</div>
                 </div>
               );
             })}
