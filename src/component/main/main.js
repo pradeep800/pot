@@ -3,6 +3,7 @@ import Blog from "../Blog/blog";
 import Contact from "../contact/contact";
 import About from "../about/about";
 import Home from "../home/home";
+import { Redirect } from "react-router-dom";
 export default function Main() {
   return (
     <div>
@@ -27,6 +28,10 @@ export default function Main() {
             return <Home />;
           }}
         ></Route>
+        <Redirect to="/" />
+        {
+          //when url not match with anthing
+        }
       </Switch>
     </div>
   );

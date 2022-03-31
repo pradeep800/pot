@@ -1,6 +1,23 @@
+import { useEffect, useState } from "react";
 import Canvas from "../canvas/canvas";
 import img from "./pradeep.jpg";
 export default function About() {
+  useEffect(() => {
+    let a = "hi i am pradeep bisht";
+    let i = 0;
+    let s;
+    const text = document.getElementById("inpo");
+    function write() {
+      text.innerHTML = a.slice(0, i);
+      if (i > a.length) {
+        i = 0;
+        clearInterval(s);
+      }
+      i++;
+    }
+    s = setInterval(write, 200);
+  }, []);
+
   return (
     <div>
       <div className="h-[80vh] relative">
@@ -9,9 +26,10 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center pt-[30px]">
           <img src={img} className="w-[200px]"></img>
-          <p className="text-xl pt-[10vh] font-black font-mono text-black-500 text-center w-[100vw] ">
-            hi i am Pradeep bisht
-          </p>
+          <p
+            id="inpo"
+            className="text-xl pt-[10vh] font-black font-mono text-black-900 text-center w-[100vw] "
+          ></p>
         </div>
       </div>
     </div>
