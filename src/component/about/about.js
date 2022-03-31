@@ -11,7 +11,7 @@ export default function About() {
       text.innerHTML = a.slice(0, i);
       if (i > a.length) {
         i = 0;
-        clearInterval(s);
+        clearTimeout(s);
       }
       i++;
     }
