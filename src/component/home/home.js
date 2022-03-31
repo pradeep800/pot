@@ -13,12 +13,12 @@ export default function Home() {
       i++;
     }
     console.log(i);
-    s = setInterval(write, 3000);
+    s = setInterval(write, 3500);
   }, []);
 
   return (
     <div>
-      <div className="overflow-hidden ">
+      <div className="overflow-hidden border-4 border-blue-300">
         <div id="cas" className="flex box-border translate-x-0 ">
           <div>
             <div className="flex  font-mono flex-col w-[100vw] h-[30vh] bg-sky-400 place-content-around">
