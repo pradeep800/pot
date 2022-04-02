@@ -22,7 +22,7 @@ export default function Preview({ obj }) {
               </p>
             </div>
           </div>
-          <div className="   mt-4 sm:mt-8 min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	 sm:text-sm mx-[12px] text-justify sm:mr-[10vh]  ">
+          <div className="   mt-4 sm:mt-8 min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	  mx-[12px] text-justify sm:mr-[10vh]  ">
             {obj.para.map((value, index) => {
               return (
                 <div key={index}>
