@@ -20,7 +20,7 @@ export default function Main() {
     });
   }, []);
   useEffect(() => {
-    setTimeout(setLoaded, 300, true);
+    setTimeout(setLoaded, 1000, true);
   }, [obj]);
   return (
     <div>

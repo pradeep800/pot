@@ -36,7 +36,12 @@ export default function Preview({ obj }) {
         </div>
       </div>
       <div className="text-center bg-gray-300 text-blue-800 mb-8 py-3 hover:text-red-300 hover:bg-gray-600">
-        <Link to={`/blog/${obj.key}`}>Read more</Link>
+        <Link
+          className="text-center bg-gray-300 text-blue-800 mb-8 px-[34vw] py-3 hover:text-red-300 hover:bg-gray-600"
+          to={`/blog/${obj.key}`}
+        >
+          Read more
+        </Link>
       </div>
     </div>
   );
