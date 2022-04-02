@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function Preview({ obj }) {
   return (
@@ -35,7 +36,7 @@ export default function Preview({ obj }) {
         </div>
       </div>
       <div className="text-center bg-gray-300 text-blue-800 mb-8 py-3 hover:text-red-300 hover:bg-gray-600">
-        <a>Read more</a>
+        <Link to={`/blog/${obj.key}`}>Read more</Link>
       </div>
     </div>
   );
