@@ -39,7 +39,7 @@ export default function Blog({ object }) {
                   </p>
                 </div>
               </div>
-              <div className="text-sm sm:w-[70vw] sm:text-base text-justify flex flex-col place-items-center place-content-center md:w-[60vw] ">
+              <div className="sm:w-[70vw] text-base sm:text-xl  text-justify flex flex-col place-items-center place-content-center md:w-[60vw] ">
                 {obj.para.map((value, index) => {
                   return (
                     <div key={index}>
