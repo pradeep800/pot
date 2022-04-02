@@ -1,6 +1,5 @@
-export default function Blog({ obj }) {
-  return (
-    <div className="relative bg-gray-300  ">
+return (
+    <div key={obj.key} className="relative bg-gray-300  ">
       <div>
         <img
           src={obj.img}
@@ -34,4 +33,3 @@ export default function Blog({ obj }) {
       </div>
     </div>
   );
-}

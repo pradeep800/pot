@@ -13,7 +13,7 @@ export default function Home() {
       i++;
     }
     console.log(i);
-    s = setInterval(write, 3500);
+    s = setInterval(write, 2000);
   }, []);
 
   return (

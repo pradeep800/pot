@@ -1,5 +1,5 @@
 import { Switch, Route } from "react-router-dom";
-import Blog from "../Blog/blog";
+import Blogs from "../Blog/blogs";
 import Contact from "../contact/contact";
 import About from "../about/about";
 import Home from "../home/home";
@@ -20,7 +20,7 @@ export default function Main() {
           <Contact />
         </Route>
         <Route path="/blog">
-          <Blog />
+          <Blogs />
         </Route>
         <Route
           path="/"
