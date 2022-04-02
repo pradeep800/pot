@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+import { Link } from "react-router-dom";
 export default function Preview({ obj }) {
   return (
     <div className="w-[80vw] mt-8">
@@ -15,11 +15,11 @@ export default function Preview({ obj }) {
               {obj.title}
             </h1>
             <p className="sm:p-4 p-1"></p>
-            <div className="flex justify-between  text-1xl font-mono ">
+            <div className="flex justify-between text-red-400 text-1xl font-mono ">
               <p>{obj.upload} </p>
 
               <p>
-                &nbsp;<span className="text-green-300">by</span> {obj.author}
+                &nbsp;<span className="">by</span> {obj.author}
               </p>
             </div>
           </div>
@@ -35,7 +35,13 @@ export default function Preview({ obj }) {
         </div>
       </div>
       <div className="text-center bg-gray-300 text-blue-800 mb-8 py-3 hover:text-red-300 hover:bg-gray-600">
-        <a className="">Read more</a>
+        <Link
+          to={() => {
+            return `/blog/${obj.key}`;
+          }}
+        >
+          read more
+        </Link>
       </div>
     </div>
   );
