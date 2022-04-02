@@ -18,27 +18,28 @@ export default function Blog({ object }) {
       {(() => {
         if (obj !== "") {
           return (
-            <div>
+            <div className="flex flex-col place-items-center">
               <img
                 src={obj.img}
                 alt="i don't know what happen"
-                className="object-cover absolute w-[100vw] h-[30vh] "
+                className="object-cover absolute sm:w-[80vw] h-[30vh] "
               ></img>
               <div className="relative z-30 p-[5vh] h-[30vh] flex flex-col justify-between">
                 <h1 className="text-center text-4xl font-black  text-pink-600">
                   {obj.title}
                 </h1>
                 <p className="sm:p-4 p-1"></p>
-                <div className="flex justify-between text-red-400 text-1xl font-mono ">
+                <div className="w-[80vw] flex justify-between px-[20px] text-red-400 text-1xl font-mono md:justify-around ">
+                  <p>{obj.upload}</p>
                   <p>
-                    <span>Upload date</span>:- {obj.upload}
-                  </p>
-                  <p>
-                    <span>Author name</span>:- {obj.author}
+                    <span className="text-green-300 font-bold text-xl">
+                      by&nbsp;
+                    </span>
+                    {obj.author}
                   </p>
                 </div>
               </div>
-              <div className="   mt-4 sm:mt-8 min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	 sm:text-xl mx-[12px] text-justify sm:mr-[10vh]  ">
+              <div className="text-sm w-[70vw] sm:text-base text-justify flex flex-col place-items-center place-content-center md:w-[60vw] ">
                 {obj.para.map((value, index) => {
                   return (
                     <div key={index}>
