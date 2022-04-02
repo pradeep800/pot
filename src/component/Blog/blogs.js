@@ -16,7 +16,7 @@ export default function Blogs() {
     setTimeout(setLoaded, 300, true);
   }, [obj]);
   return (
-    <div className="flex flex-col place-items-center justify-around">
+    <div className="flex flex-col bg-green-200 place-items-center justify-around">
       {(() => {
         if (!load) {
           return <Spinner>Loading....</Spinner>;
