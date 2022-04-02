@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 export default function Blog({ object }) {
@@ -11,10 +10,13 @@ export default function Blog({ object }) {
       obj = object[i];
     }
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="relative bg-gray-300  ">
       {(() => {
-        if (obj != "") {
+        if (obj !== "") {
           return (
             <div>
               <img

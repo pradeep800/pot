@@ -1,9 +1,8 @@
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 export default function Preview({ obj }) {
   return (
-    <div className="w-[80vw] mt-8">
-      <div className="relative bg-gray-300  h-[80vh] overflow-hidden ">
+    <div className="sm:w-[80vw] w-[95vw] md:w-[50vw] mt-8">
+      <div className="relative bg-gray-300  h-[90vh] overflow-hidden ">
         <div>
           <img
             src={obj.img}
@@ -23,7 +22,7 @@ export default function Preview({ obj }) {
               </p>
             </div>
           </div>
-          <div className="   mt-4 sm:mt-8 min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	 sm:text-xl mx-[12px] text-justify sm:mr-[10vh]  ">
+          <div className="   mt-4 sm:mt-8 min-h-[70vh] sm:ml-[10vh] pb-[10vh]  text-[16px]	 sm:text-sm mx-[12px] text-justify sm:mr-[10vh]  ">
             {obj.para.map((value, index) => {
               return (
                 <div key={index}>
