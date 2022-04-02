@@ -25,11 +25,11 @@ export default function Blog({ object }) {
                 className="object-cover absolute sm:w-[80vw] h-[30vh] "
               ></img>
               <div className="relative z-30 p-[5vh] h-[30vh] flex flex-col justify-between">
-                <h1 className="text-center text-4xl font-black  text-pink-600">
+                <h1 className="text-center text-4xl font-black  text-red-300">
                   {obj.title}
                 </h1>
                 <p className="sm:p-4 p-1"></p>
-                <div className="w-[80vw] flex justify-between px-[20px] text-red-400 text-1xl font-mono md:justify-around ">
+                <div className=" w-[100vw] sm:w-[80vw] flex justify-between px-[20px] text-pink-400 text-lg text-1xl font-mono md:justify-around ">
                   <p>{obj.upload}</p>
                   <p>
                     <span className="text-green-300 font-bold text-xl">
@@ -39,7 +39,7 @@ export default function Blog({ object }) {
                   </p>
                 </div>
               </div>
-              <div className="text-sm w-[70vw] sm:text-base text-justify flex flex-col place-items-center place-content-center md:w-[60vw] ">
+              <div className="text-sm sm:w-[70vw] sm:text-base text-justify flex flex-col place-items-center place-content-center md:w-[60vw] ">
                 {obj.para.map((value, index) => {
                   return (
                     <div key={index}>
