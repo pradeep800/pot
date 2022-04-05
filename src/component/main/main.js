@@ -23,7 +23,7 @@ export default function Main() {
     setTimeout(setLoaded, 1000, true);
   }, [obj]);
   return (
-    <div>
+    <div className="relative top-[40px]">
       <Switch>
         <Route
           path="/"
