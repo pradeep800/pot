@@ -4,6 +4,7 @@ import img from "./1.png";
 export default function Nav() {
   let ham = document.getElementById("hamburger");
   let open = document.getElementById("open");
+
   function removenav() {
     let ham = document.getElementById("hamburger");
     let open = document.getElementById("open");
@@ -20,6 +21,10 @@ export default function Nav() {
         ham.style.top = "0px";
       }
     };
+    if (getComputedStyle(ham).display != "none") {
+      open.style.display = "none";
+      ham.style.top = "10px";
+    }
     let i = 0;
     ham.onclick = () => {
       if (i % 2 === 0) {
