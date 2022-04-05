@@ -43,7 +43,10 @@ export default function Nav() {
         <img src={img} alt="logo"></img>
       </NavLink>
       <div className="w-[100vw] sm:w-[70vw]">
-        <p id="hamburger" className="sm:hidden relative  left-[80vw]">
+        <p
+          id="hamburger"
+          className="sm:hidden relative  left-[80vw] text-3xl font-black"
+        >
           &#9776;
         </p>
         <ul
