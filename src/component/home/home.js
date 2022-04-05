@@ -12,7 +12,6 @@ export default function Home() {
       }
       i++;
     }
-    console.log(i);
     s = setInterval(write, 2000);
   }, []);
 

@@ -2,7 +2,6 @@ import { useEffect } from "react";
 export default function Canvas() {
   useEffect(() => {
     let canvas = document.getElementById("canvas");
-    console.log(canvas);
     const ctx = canvas.getContext("2d");
     let pa = [];
     canvas.width = window.innerWidth - 80;
