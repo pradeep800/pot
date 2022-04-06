@@ -18,7 +18,7 @@ export default function Nav() {
       const style = getComputedStyle(ham).display;
       if (style == "none") {
         open.style.display = "flex";
-        ham.style.top = "0px";
+        ham.style.top = "10px";
       }
     };
     if (getComputedStyle(ham).display != "none") {
@@ -32,7 +32,7 @@ export default function Nav() {
         ham.style.top = "10px";
       } else {
         open.style.display = "flex";
-        ham.style.top = "0px";
+        ham.style.top = "10px";
       }
       i++;
     };
@@ -46,7 +46,7 @@ export default function Nav() {
       >
         <img src={img} alt="logo"></img>
       </NavLink>
-      <div className="w-[100vw] sm:w-[70vw]">
+      <div className="w-[100vw] sm:w-[70vw] ">
         <p
           id="hamburger"
           className="sm:hidden relative  left-[80vw] text-3xl font-black"
