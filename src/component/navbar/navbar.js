@@ -38,7 +38,7 @@ export default function Nav() {
     };
   }, []);
   return (
-    <div className="flex  h-[50px] fixed z-30 sm:justify-between bg-green-300 w-[100vw]">
+    <div className="flex  h-[50px] fixed z-40 sm:justify-between bg-green-300 w-[100vw]">
       <NavLink to="/" className="w-[40px] relative left-[20px] top-[5px]">
         <img src={img} alt="logo"></img>
       </NavLink>
@@ -49,9 +49,9 @@ export default function Nav() {
         >
           &#9776;
         </p>
-        <ul
+        <div
           id="open"
-          className="bg-green-300 flex flex-col sm:flex-row items-end sm:justify-between sm:w-auto pr-[20px]"
+          className="bg-green-300 text-xl h-[30vh] sm:h-auto flex flex-col sm:flex-row justify-around items-end sm:justify-between sm:w-auto pr-[20px]"
         >
           <NavLink
             onClick={removenav}
@@ -77,7 +77,7 @@ export default function Nav() {
           >
             Blogs
           </NavLink>
-        </ul>
+        </div>
       </div>
     </div>
   );
