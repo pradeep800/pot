@@ -39,7 +39,11 @@ export default function Nav() {
   }, []);
   return (
     <div className="flex  h-[50px] fixed z-40 sm:justify-between bg-green-300 w-[100vw]">
-      <NavLink to="/" className="w-[40px] relative left-[20px] top-[5px]">
+      <NavLink
+        onClick={removenav}
+        to="/"
+        className="w-[40px] relative left-[20px] top-[5px]"
+      >
         <img src={img} alt="logo"></img>
       </NavLink>
       <div className="w-[100vw] sm:w-[70vw]">
