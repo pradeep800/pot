@@ -36,11 +36,11 @@ export default function Nav() {
     };
   }, []);
   return (
-    <div className="flex  h-[50px] fixed z-40 sm:justify-around sm:items-center  bg-green-300 w-[100vw]">
+    <div className="flex  h-[50px] fixed  z-40 sm:justify-around sm:items-center  bg-green-300 w-[100vw]">
       <NavLink
         onClick={removenav}
         to="/"
-        className="w-[40px]  justify-self-center  "
+        className="w-[40px] sm:static relative left-4 top-2 justify-self-center   "
       >
         <img src={img} alt="logo"></img>
       </NavLink>
