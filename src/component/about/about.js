@@ -22,13 +22,13 @@ export default function About() {
     <div>
       <div className="h-[80vh] relative">
         <div className="w-[100vw] flex absolute pt-[30px] justify-center">
-          <Canvas className="bg-blue-300" />
+          <Canvas />
         </div>
         <div className="flex flex-col items-center pt-[30px]">
           <img src={img} className="w-[200px]"></img>
           <p
             id="inpo"
-            className="text-xl pt-[10vh] font-black font-mono text-black-900 text-center w-[100vw] "
+            className=" pt-[10vh]  font-bold font-mono text-2xl text-stone-700 text-center w-[100vw] "
           ></p>
         </div>
       </div>
