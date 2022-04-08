@@ -21,9 +21,8 @@ export default function Main() {
         mode: "cors",
       });
       let json = await result.json();
-      console.log(json);
+
       let blob = await photo.blob();
-      console.log(blob);
       let render = new FileReader();
       render.readAsDataURL(blob);
       render.onload = () => {
