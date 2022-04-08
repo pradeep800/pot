@@ -28,7 +28,7 @@ export default function About() {
           <img src={img} className="w-[200px]"></img>
           <p
             id="inpo"
-            className=" pt-[10vh]  font-bold font-mono text-2xl text-stone-700 text-center w-[100vw] "
+            className=" pt-[10vh]  font-bold font-mono text-xl text-stone-700 text-center w-[100vw] "
           ></p>
         </div>
       </div>
