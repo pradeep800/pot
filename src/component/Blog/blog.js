@@ -15,7 +15,7 @@ export default function Blog({ object }) {
   }, []);
   return (
     <div className="w-[100vw] flex justify-center bg-green-200">
-      <div className="sm:w-[70vw] w-[100vw] lg:w-[50vw] mt-8 flex">
+      <div className="sm:w-[80vw] w-[100vw] lg:w-[50vw] mt-8 flex">
         <div className="relative bg-gray-300  ">
           <div>
             <img
@@ -23,16 +23,16 @@ export default function Blog({ object }) {
               alt="i don't know what happen"
               className="object-cover absolute w-[100vw] h-[30vh] "
             ></img>
-            <div className="relative z-30 pt-[5vh] h-[30vh] flex flex-col justify-between">
+            <div className="relative z-30 p-[5vh] h-[30vh] flex flex-col justify-between">
               <h1 className="text-center text-4xl font-black  text-pink-600">
                 {obj.title}
               </h1>
-              <p className="md:p-4 p-1"></p>
-              <div className="flex justify-around  text-red-400 text-1xl font-mono ">
+              <p className="sm:p-4 p-1"></p>
+              <div className="flex justify-between text-red-400 text-1xl font-mono ">
                 <p>{obj.upload} </p>
 
                 <p>
-                  &nbsp;<span>by</span> {obj.author}
+                  &nbsp;<span className="">by</span> {obj.author}
                 </p>
               </div>
             </div>

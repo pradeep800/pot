@@ -12,7 +12,6 @@ export default function Blogs({ obj }) {
   const indexofFirstPost = indexOfLastPost - postPerPage;
   const current = obj.slice(indexofFirstPost, indexOfLastPost);
   function paginate(number) {
-    console.log(number);
     window.scrollTo(0, 0);
     setCurrentPage(number);
   }

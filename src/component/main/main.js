@@ -1,27 +1,24 @@
 import { Switch, Route } from "react-router-dom";
 import Blogs from "../Blog/blogs";
-import Contact from "../contact/contact";
-import About from "../about/about";
 import Home from "../home/home";
 import temp from "./blog_data";
 import { Redirect } from "react-router-dom";
-import { useHistory } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import Blog from "../Blog/blog";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Spinner from "../spinner/spinner";
 import axios from "axios";
 export default function Main() {
+  const Contact = lazy(() => import("../contact/contact"));
+  const About = lazy(() => import("../about/about"));
   const [load, setLoaded] = useState(false);
   const [obj, setobj] = useState([]);
   useEffect(() => {
-    fetch("https://api.pradeepbisht.com/blogs").then(async (result) => {
+    axios.get("https://api.pradeepbisht.com/blogs").then(async (result) => {
       let photo = await fetch("https://api.pradeepbisht.com/image/1", {
-        method: "GET",
         mode: "cors",
       });
-      let json = await result.json();
 
+      let json = result.data;
       let blob = await photo.blob();
       let render = new FileReader();
       render.readAsDataURL(blob);
@@ -39,23 +36,18 @@ export default function Main() {
   return (
     <div className="relative top-[40px]">
       <Switch>
-        <Route
-          path="/"
-          exact
-          render={() => {
-            return <Home />;
-          }}
-        ></Route>
-        <Route
-          path="/"
-          exact
-          render={() => {
-            return <Home />;
-          }}
-        ></Route>
-        <Route path="/about">{obj.length != 0 && <About obj={obj} />}</Route>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/about">
+          <Suspense fallback={<Spinner>Loading...</Spinner>}>
+            {obj.length != 0 && <About obj={obj} />}
+          </Suspense>
+        </Route>
         <Route path="/contact">
-          <Contact />
+          <Suspense fallback={<Spinner>Loading...</Spinner>}>
+            <Contact />
+          </Suspense>
         </Route>
         <Route exact path="/blog">
           {() => {
