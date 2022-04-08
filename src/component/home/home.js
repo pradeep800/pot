@@ -17,10 +17,10 @@ export default function Home() {
 
   return (
     <div>
-      <div className="overflow-hidden border-4 border-blue-300">
+      <div className="overflow-hidden ">
         <div id="cas" className="flex box-border translate-x-0 ">
           <div>
-            <div className="flex  font-mono flex-col w-[100vw] h-[30vh] bg-sky-400 place-content-around">
+            <div className="flex  font-mono flex-col w-[100vw] h-[30vh]  bg-sky-400 place-content-around">
               <span className="text-center">"Perfection is enemy of good"</span>
               <span className="text-right mx-8">Voltaire</span>
             </div>
@@ -42,7 +42,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <div className="flex font-mono flex-col w-[100vw] h-[30vh] bg-green-400 place-content-around">
+            <div className="flex font-mono flex-col w-[100vw] h-[30vh] bg-green-200 place-content-around">
               <span className="text-center">
                 "Many people think that they lack motivation when they lack
                 clarity"

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Canvas from "../canvas/canvas";
-import img from "./pradeep.jpg";
+import img from "./pradeep.png";
 export default function About() {
   useEffect(() => {
     let a = "hi i am pradeep bisht";
@@ -22,7 +22,7 @@ export default function About() {
     <div>
       <div className="h-[80vh] relative">
         <div className="w-[100vw] flex absolute pt-[30px] justify-center">
-          <Canvas />
+          <Canvas className="bg-blue-300" />
         </div>
         <div className="flex flex-col items-center pt-[30px]">
           <img src={img} className="w-[200px]"></img>
