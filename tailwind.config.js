@@ -48,13 +48,13 @@ module.exports = {
             opacity: 0,
           },
           "50%": {
-            left: "10%",
+            left: "5%",
           },
           "75%": {
-            left: "15%",
+            left: "10%",
           },
           "100%": {
-            left: "17%",
+            left: "15%",
           },
         },
         joint2: {
