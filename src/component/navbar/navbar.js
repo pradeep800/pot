@@ -16,24 +16,25 @@ export default function Nav() {
       const style = getComputedStyle(ham).display;
       if (style == "none") {
         open.style.display = "flex";
-        ham.style.top = "10px";
       }
     };
     if (getComputedStyle(ham).display !== "none") {
       open.style.display = "none";
-      ham.style.top = "10px";
     }
     let i = 1;
     ham.onclick = () => {
-      if (i % 2 === 0) {
-        open.style.display = "none";
-        ham.style.top = "10px";
-      } else {
+      if (open.style.display === "none") {
         open.style.display = "flex";
-        ham.style.top = "10px";
+      } else {
+        open.style.display = "none";
       }
-      i++;
     };
+    // window.onclick = () => {
+    //   if (open.style.display === "flex") {
+    //     i++;
+    //     open.style.display = "none";
+    //   }
+    // };
   }, []);
   return (
     <div className="flex  h-[50px] fixed  z-40 sm:justify-around sm:items-center  bg-green-300 w-[100vw]">
@@ -47,7 +48,7 @@ export default function Nav() {
       <div className="w-[100vw] sm:w-[70vw] ">
         <p
           id="hamburger"
-          className="sm:hidden relative  left-[80vw] text-3xl font-black"
+          className="sm:hidden relative  left-[80vw] top-[10px] text-3xl font-black"
         >
           &#9776;
         </p>
