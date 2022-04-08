@@ -12,6 +12,7 @@ module.exports = {
         uptodown: {
           "0%": {
             top: "0px",
+            opacity: 0,
           },
           "50%": {
             top: "40px",
