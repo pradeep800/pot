@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Canvas from "../canvas/canvas";
 import img from "./pradeep.png";
+import glass from "./glass.png";
 export default function About() {
   useEffect(() => {
     let a = "hi i am pradeep bisht";
@@ -26,6 +27,10 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center pt-[30px]">
           <img src={img} className="w-[200px]"></img>
+          <img
+            src={glass}
+            className="w-[150px]  absolute right-auto animate-uptodown"
+          ></img>
           <p
             id="inpo"
             className=" pt-[10vh]  font-bold font-mono text-xl text-stone-700 text-center w-[100vw] "

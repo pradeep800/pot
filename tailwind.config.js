@@ -6,18 +6,21 @@ module.exports = {
         red: ["Red Hat Mono"],
       },
       animation: {
-        spinner: "spinner 0.6s linear 0.3s infinite normal forwards",
+        uptodown: "uptodown 1s ease-out  normal forwards",
       },
       keyframes: {
-        spinner: {
+        uptodown: {
           "0%": {
-            color: "bg-blue-200",
+            top: "0px",
           },
           "50%": {
-            color: "bg-blue-400",
+            top: "40px",
+          },
+          "75%": {
+            top: "60px",
           },
           "100%": {
-            color: "bg-blue-100",
+            top: "80px",
           },
         },
       },
