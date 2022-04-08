@@ -2,12 +2,10 @@ import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import img from "./1.png";
 export default function Nav() {
-  let ham = document.getElementById("hamburger");
-  let open = document.getElementById("open");
-
   function removenav() {
     let ham = document.getElementById("hamburger");
     let open = document.getElementById("open");
+    console.log(getComputedStyle(ham).display);
     if (getComputedStyle(ham).display != "none") open.style.display = "none";
     ham.style.top = "10px";
   }
@@ -21,11 +19,11 @@ export default function Nav() {
         ham.style.top = "10px";
       }
     };
-    if (getComputedStyle(ham).display != "none") {
+    if (getComputedStyle(ham).display !== "none") {
       open.style.display = "none";
       ham.style.top = "10px";
     }
-    let i = 0;
+    let i = 1;
     ham.onclick = () => {
       if (i % 2 === 0) {
         open.style.display = "none";
@@ -38,11 +36,11 @@ export default function Nav() {
     };
   }, []);
   return (
-    <div className="flex  h-[50px] fixed z-40 sm:justify-between bg-green-300 w-[100vw]">
+    <div className="flex  h-[50px] fixed z-40 sm:justify-around sm:items-center  bg-green-300 w-[100vw]">
       <NavLink
         onClick={removenav}
         to="/"
-        className="w-[40px] relative left-[20px] top-[5px]"
+        className="w-[40px]  justify-self-center  "
       >
         <img src={img} alt="logo"></img>
       </NavLink>
@@ -55,7 +53,7 @@ export default function Nav() {
         </p>
         <div
           id="open"
-          className="bg-green-300 text-xl h-[30vh] sm:h-auto flex flex-col sm:flex-row justify-around items-end sm:justify-between sm:w-auto pr-[20px]"
+          className="bg-green-300 text-xl h-[30vh] sm:h-auto flex flex-col sm:flex-row justify-around items-end sm:justify-between sm:items-center sm:w-auto pr-[20px]"
         >
           <NavLink
             onClick={removenav}
