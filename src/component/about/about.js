@@ -34,7 +34,7 @@ export default function About() {
           ></img>
           <img
             src={joint}
-            className="absolute w-[200px] left-[0px]  top-[95px] animate-joint"
+            className="absolute w-[200px] left-[0px]  top-[95px] sm:animate-joint2 animate-joint"
           ></img>
           <p
             id="inpo"
