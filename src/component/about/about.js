@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Canvas from "../canvas/canvas";
 import img from "./pradeep.png";
 import glass from "./glass.png";
+import joint from "./joint.gif";
 export default function About() {
   useEffect(() => {
     let a = "hi i am pradeep bisht";
@@ -30,6 +31,10 @@ export default function About() {
           <img
             src={glass}
             className="w-[150px]  absolute right-auto animate-uptodown"
+          ></img>
+          <img
+            src={joint}
+            className="absolute w-[200px] left-[0px]  top-[95px] animate-joint"
           ></img>
           <p
             id="inpo"

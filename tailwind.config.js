@@ -7,7 +7,8 @@ module.exports = {
         cool: ["Rubik Bubbles"],
       },
       animation: {
-        uptodown: "uptodown 1s ease-out  normal forwards",
+        uptodown: "uptodown 1.6s ease-out  normal forwards",
+        joint: "joint 1.6s ease  normal forwards",
         shadowChange: "shadowChange 2s ease-in alternate infinite",
       },
       keyframes: {
@@ -38,6 +39,21 @@ module.exports = {
           },
           "100%": {
             top: "80px",
+          },
+        },
+        joint: {
+          "0%": {
+            left: "30px",
+            opacity: 0,
+          },
+          "50%": {
+            left: "80px",
+          },
+          "75%": {
+            left: "150px",
+          },
+          "100%": {
+            left: "200px",
           },
         },
       },

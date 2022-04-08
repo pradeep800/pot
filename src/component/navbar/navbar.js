@@ -21,7 +21,6 @@ export default function Nav() {
     if (getComputedStyle(ham).display !== "none") {
       open.style.display = "none";
     }
-    let i = 1;
     ham.onclick = () => {
       if (open.style.display === "none") {
         open.style.display = "flex";
@@ -29,15 +28,9 @@ export default function Nav() {
         open.style.display = "none";
       }
     };
-    // window.onclick = () => {
-    //   if (open.style.display === "flex") {
-    //     i++;
-    //     open.style.display = "none";
-    //   }
-    // };
   }, []);
   return (
-    <div className="flex  h-[50px] fixed  z-40 sm:justify-around sm:items-center  bg-green-300 w-[100vw]">
+    <nav className="flex  h-[50px] fixed  z-40 sm:justify-around sm:items-center  bg-green-300 w-[100vw]">
       <NavLink
         onClick={removenav}
         to="/"
@@ -82,6 +75,6 @@ export default function Nav() {
           </NavLink>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
