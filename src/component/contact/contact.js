@@ -4,7 +4,7 @@ import twitter from "./twitter.png";
 import github from "./github.png";
 export default function Contact() {
   return (
-    <div className="flex h-[100vh] items-center  justify-center bg-green-200 ">
+    <div className="flex h-[95vh] items-center  justify-center bg-green-200 ">
       <div className="bg-green-300 h-[70vh] w-[90vw]  flex flex-col  justify-center content-around rounded-2xl">
         <div className=" font-cool font-black text-4xl flex  flex-col items-center  justify-center">
           Contact Me
