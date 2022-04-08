@@ -7,16 +7,31 @@ import temp from "./blog_data";
 import { Redirect } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import photo from "./1.jpg";
 import Blog from "../Blog/blog";
 import { useState, useEffect } from "react";
 import Spinner from "../spinner/spinner";
+import axios from "axios";
 export default function Main() {
   const [load, setLoaded] = useState(false);
   const [obj, setobj] = useState([]);
   useEffect(() => {
-    temp().then((result) => {
-      setobj(result);
+    fetch("https://api.pradeepbisht.com/blogs").then(async (result) => {
+      let photo = await fetch("https://api.pradeepbisht.com/image/1", {
+        method: "GET",
+        mode: "cors",
+      });
+      let json = await result.json();
+      console.log(json);
+      let blob = await photo.blob();
+      console.log(blob);
+      let render = new FileReader();
+      render.readAsDataURL(blob);
+      render.onload = () => {
+        json.forEach((object) => {
+          object.img = render.result;
+        });
+      };
+      setobj(json);
     });
   }, []);
   useEffect(() => {
