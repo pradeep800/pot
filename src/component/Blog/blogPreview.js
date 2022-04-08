@@ -35,6 +35,7 @@ export default function Preview({ obj }) {
       </div>
       <div className="text-center bg-gray-300 text-blue-800 mb-8 py-3 hover:text-red-300  hover:bg-gray-600">
         <Link
+          className=" py-3 px-[34vw]"
           to={() => {
             return `/blog/${obj.key}`;
           }}
