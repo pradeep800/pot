@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 export default function Home() {
-  let html = document.querySelector("body:not(nav)");
+ 
   useEffect(() => {
     let i = 0;
     let s;
