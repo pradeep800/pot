@@ -10,6 +10,7 @@ module.exports = {
         uptodown: "uptodown 1.6s ease-out  normal forwards",
         joint: "joint 1.6s ease  normal forwards",
         joint2: "joint2 1.6s ease  normal forwards",
+        joint3: "joint3 1.6s ease  normal forwards",
         shadowChange: "shadowChange 2s ease-in alternate infinite",
       },
       keyframes: {
@@ -59,17 +60,32 @@ module.exports = {
         },
         joint2: {
           "0%": {
-            left: "50px",
+            left: "0%",
             opacity: 0,
           },
           "50%": {
-            left: "100px",
+            left: "10%",
           },
           "75%": {
-            left: "150px",
+            left: "20%",
           },
           "100%": {
-            left: "200px",
+            left: "30%",
+          },
+        },
+        joint3: {
+          "0%": {
+            left: "0%",
+            opacity: 0,
+          },
+          "50%": {
+            left: "10%",
+          },
+          "75%": {
+            left: "25%",
+          },
+          "100%": {
+            left: "40%",
           },
         },
       },
