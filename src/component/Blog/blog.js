@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Home from "../home/home";
 
 export default function Blog({ object }) {
   let obj = "";
@@ -52,3 +53,15 @@ export default function Blog({ object }) {
     </div>
   );
 }
+Blog.defaultProps = {
+  object: [],
+};
+Blog.propTypes = {
+  /*
+  import PropTypes from "prop-types"
+  if there is only one object 
+  para:ProtoTypes.arrayOf(ProtoTypes.string).isRequired;
+  img:ProtoTypes.string;
+  title:ProtoTypes.string;
+  */
+};

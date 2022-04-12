@@ -3,21 +3,33 @@ import Canvas from "../canvas/canvas";
 import img from "./pradeep.png";
 import glass from "./glass.png";
 import joint from "./joint.gif";
+import { NavLink } from "react-router-dom";
 export default function About() {
   useEffect(() => {
-    let a = "hi i am pradeep bisht";
-    let i = 0;
-    let s;
-    const text = document.getElementById("inpo");
-    function write() {
-      text.innerHTML = a.slice(0, i);
-      if (i > a.length) {
-        i = 0;
-        clearTimeout(s);
+    let str = ["pradeep", "coder", "student", "a pround indian"];
+    let text = document.getElementById("auto-text");
+    let i = 0,
+      j = 0;
+    let p;
+    let first = true;
+    setInterval(() => {
+      text.innerText = str[i].substr(0, j + 1);
+      j++;
+      if (j == str[i].length) {
+        j--;
       }
-      i++;
-    }
-    s = setInterval(write, 200);
+      if (str[i].length - 1 == j && first) {
+        first = false;
+        setTimeout(() => {
+          j = 0;
+          i++;
+          if (i == str.length) {
+            i = 0;
+          }
+          first = true;
+        }, 1000);
+      }
+    }, 200);
   }, []);
 
   return (
@@ -36,10 +48,10 @@ export default function About() {
             src={joint}
             className="absolute w-[200px] left-[0px]  top-[95px] animate-joint sm:animate-joint2 lg:animate-joint3"
           ></img>
-          <p
-            id="inpo"
-            className=" pt-[10vh]  font-bold font-mono text-xl text-stone-700 text-center w-[100vw] "
-          ></p>
+          <div id="text" className="text-2xl   font-black font-cool">
+            i am &nbsp;
+            <span id="auto-text" className="animate-pulse"></span>
+          </div>
         </div>
       </div>
     </div>

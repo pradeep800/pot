@@ -56,7 +56,7 @@ export default function Main() {
             } else if (load && obj.length != 0) {
               return <Blogs obj={obj} />;
             } else {
-              <Spinner>Loading....</Spinner>;
+              return <Spinner>Loading....</Spinner>;
             }
           }}
         </Route>
