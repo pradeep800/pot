@@ -25,7 +25,7 @@ export default function Preview({ obj }) {
       </div>
       <div className="text-center h-[2rem] ">
         <Link
-          className="p-[40%]"
+          className="p-[30%]"
           to={() => {
             return `/blog/${obj.key}`;
           }}
