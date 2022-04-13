@@ -17,7 +17,7 @@ export default function Blogs({ obj }) {
   }
   const totalPosts = obj.length;
   return (
-    <div className=" flex flex-col bg-green-200 place-items-center justify-around">
+    <div className="bg-green-200 overflow-hidden">
       {(() => {
         return current.map((objc) => {
           return <Preview key={objc.key} obj={objc} />;

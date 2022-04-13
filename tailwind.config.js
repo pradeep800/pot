@@ -5,6 +5,7 @@ module.exports = {
       fontFamily: {
         red: ["Red Hat Mono"],
         cool: ["Rubik Bubbles"],
+        writing: ["Nunito"],
       },
       animation: {
         uptodown: "uptodown 1.6s ease-out  normal forwards",

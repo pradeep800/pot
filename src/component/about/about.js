@@ -6,7 +6,7 @@ import joint from "./joint.gif";
 import { NavLink } from "react-router-dom";
 export default function About() {
   useEffect(() => {
-    let str = ["pradeep", "coder", "student", "a pround indian"];
+    let str = ["pradeep", "coder", "student", "a proud indian"];
     let text = document.getElementById("auto-text");
     let i = 0,
       j = 0;
@@ -33,7 +33,7 @@ export default function About() {
   }, []);
 
   return (
-    <div>
+    <div className="bg-green-200 h-[100vh] ">
       <div className="h-[80vh] relative">
         <div className="w-[100vw] flex absolute pt-[30px] justify-center">
           <Canvas />

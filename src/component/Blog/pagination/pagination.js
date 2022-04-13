@@ -7,7 +7,7 @@ export const Pagination = ({ PostPerPage, TotalPosts, paginate }) => {
     pageNumber.push(i);
   }
   return (
-    <ul className="bg-red-300 flex justify-around w-[100vw] sm:w-[80vw] mb-[20px] text-center rounded-lg">
+    <ul className="bg-red-300 m-[auto] flex justify-around w-[40rem] mb-[20px] text-center rounded-lg">
       {pageNumber.map((number) => {
         return (
           <li
