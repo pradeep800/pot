@@ -89,7 +89,7 @@ self.addEventListener("activate", (ev) => {
   );
 });
 self.addEventListener("fetch", (ev) => {
-  if (!ev.request.url.startsWith("https")) {
+  if (ev.request.url.startsWith("https")) {
     ev.respondWith(
       caches.match(ev.request).then((res) => {
         return (
