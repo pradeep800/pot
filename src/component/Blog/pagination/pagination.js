@@ -7,7 +7,7 @@ export const Pagination = ({ PostPerPage, TotalPosts, paginate }) => {
     pageNumber.push(i);
   }
   return (
-    <ul className="bg-green-400 m-[auto] flex justify-around max-w-[40rem] mb-[1rem] rounded-lg ">
+    <ul className="bg-green-400 m-[auto] flex justify-around justify-items-center max-w-[40rem] mb-[1rem] rounded-lg ">
       {pageNumber.map((number) => {
         return (
           <li
@@ -15,7 +15,7 @@ export const Pagination = ({ PostPerPage, TotalPosts, paginate }) => {
               paginate(number);
             }}
             key={number}
-            className="w-[80px] hover:bg-green-300 rounded-lg "
+            className="hover:bg-green-300 w-[2rem] rounded-lg text-center"
           >
             <a className=" ">{number}</a>
           </li>
