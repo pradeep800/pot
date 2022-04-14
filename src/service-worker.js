@@ -104,6 +104,8 @@ self.addEventListener("fetch", (ev) => {
         );
       })
     );
+  } else {
+    ev.respondWith(fetch(ev.url.request));
   }
 });
 self.addEventListener("message", (ev) => {});
