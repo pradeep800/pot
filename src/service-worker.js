@@ -65,7 +65,7 @@ registerRoute(
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 const version = 3;
-let allfile = `all-file-${1}`;
+let allfile = `all-file-${version}`;
 self.addEventListener("message", (event) => {
   console.log("something here");
   if (event.data && event.data.type === "SKIP_WAITING") {
