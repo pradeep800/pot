@@ -12,7 +12,7 @@ export default function Preview({ obj }) {
               <p className="">by {obj.author}</p>
             </div>
           </div>
-          <div className="font-writing tracking-wider sm:text-lg text-justify p-[10px]  leading-6 sm:leading-7">
+          <div className="font-writing tracking-wider sm:text-lg text-justify sm:px-[3rem] p-[1rem]  leading-6 sm:leading-7">
             {obj.para.map((value, index) => {
               return (
                 <div className="pt-4" key={index}>
