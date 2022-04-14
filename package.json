@@ -26,7 +26,8 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "cool":"react-scripts build && serve -s build",
+    "port": "set  PORT=3006 && react-scripts start",
+    "cool": "react-scripts build && serve -s build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

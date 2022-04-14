@@ -4,14 +4,14 @@ import Home from "../home/home";
 import temp from "./blog_data";
 import { Redirect } from "react-router-dom";
 import Blog from "../Blog/blog";
-import Contact from "../contact/contact";
-import About from "../about/about";
+// import Contact from "../contact/contact";
+// import About from "../about/about";
 import { useState, useEffect, lazy, Suspense } from "react";
 import Spinner from "../spinner/spinner";
 import axios from "axios";
 export default function Main() {
-  // const Contact = lazy(() => import("../contact/contact"));
-  // const About = lazy(() => import("../about/about"));
+  const Contact = lazy(() => import("../contact/contact"));
+  const About = lazy(() => import("../about/about"));
   const [load, setLoaded] = useState(false);
   const [obj, setobj] = useState([]);
   useEffect(() => {
@@ -42,14 +42,14 @@ export default function Main() {
           <Home />
         </Route>
         <Route path="/about">
-          {/* <Suspense fallback={<Spinner>Loading...</Spinner>}> */}
-          {obj.length != 0 && <About obj={obj} />}
-          {/* </Suspense> */}
+          <Suspense fallback={<Spinner>Loading...</Spinner>}>
+            {obj.length != 0 && <About obj={obj} />}
+          </Suspense>
         </Route>
         <Route path="/contact">
-          {/* <Suspense fallback={<Spinner>Loading...</Spinner>}> */}
-          <Contact />
-          {/* </Suspense> */}
+          <Suspense fallback={<Spinner>Loading...</Spinner>}>
+            <Contact />
+          </Suspense>
         </Route>
         <Route exact path="/blog">
           {() => {
