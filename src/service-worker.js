@@ -64,13 +64,44 @@ registerRoute(
 
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
+const version = 2;
+let allfile = `all-file-${1}`;
 self.addEventListener("message", (event) => {
   console.log("something here");
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
 });
-self.addEventListener("install", () => {
-  console.log("hello world");
+self.addEventListener("install", (ev) => {
+  self.skipWaiting();
 });
+self.addEventListener("activate", (ev) => {
+  ev.waitUntil(
+    caches.keys().then((keys) => {
+      keys
+        .filter((key) => {
+          if (key != allfile) {
+            return true;
+          }
+        })
+        .map((key) => caches.delete(key));
+    })
+  );
+});
+self.addEventListener("fetch", (ev) => {
+  ev.respondWith(
+    caches.match(ev.request).then((res) => {
+      return (
+        res ||
+        fetch(ev.request).then((fetchresult) => {
+          caches.open(allfile).then((cache) => {
+            cache.put(ev.request, fetchresult.clone());
+            return fetchresult;
+          });
+        })
+      );
+    })
+  );
+});
+self.addEventListener("message", (ev) => {});
 // Any other custom service worker logic can go here.
