@@ -64,7 +64,7 @@ registerRoute(
 
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
-const version = 1;
+const version = 2;
 let allfile = `all-file-${version}`;
 self.addEventListener("message", (event) => {
   console.log("something here");
@@ -96,8 +96,8 @@ self.addEventListener("fetch", (ev) => {
         return (
           res ||
           fetch(ev.request).then(async (fetchresult) => {
-            await caches.open(allfile).then((cache) => {
-              await cache.put(ev.request, fetchresult);
+            caches.open(allfile).then((cache) => {
+              cache.put(ev.request, fetchresult);
               return fetch(ev.request);
             });
           })
