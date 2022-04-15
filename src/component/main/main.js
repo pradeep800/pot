@@ -16,19 +16,15 @@ export default function Main() {
   const [obj, setobj] = useState([]);
   useEffect(() => {
     axios.get("https://api.pradeepbisht.com/blogs").then(async (result) => {
-      let photo = await fetch("https://api.pradeepbisht.com/image/1", {
-        mode: "cors",
-      });
-
       let json = result.data;
-      let blob = await photo.blob();
-      let render = new FileReader();
-      render.readAsDataURL(blob);
-      render.onload = () => {
-        json.forEach((object) => {
-          object.img = render.result;
-        });
-      };
+      // let blob = await photo.blob();
+      // let render = new FileReader();
+      // render.readAsDataURL(blob);
+      // render.onload = () => {
+      //   json.forEach((object) => {
+      //     object.img = render.result;
+      //   });
+      // };
       setobj(json);
     });
   }, []);
