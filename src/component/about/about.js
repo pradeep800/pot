@@ -17,9 +17,9 @@ export default function About() {
         time.months +
         " months " +
         time.days +
-        " days" +
+        " days " +
         time.hours +
-        " hours" +
+        " hours " +
         time.minutes +
         " minutes " +
         time.seconds +
@@ -68,12 +68,12 @@ export default function About() {
   }, []);
 
   return (
-    <div className="h-[80vh]   flex  flex-col justify-center">
+    <div className="h-[80vh]   flex  flex-col justify-center font-spacing font-black">
       <div className="  h-[20rem] flex flex-col justify-center items-center">
         <div className="pt-[20px]  ">
           Hi! i am <span id="auto-text"></span>
         </div>
-        <div className=" leading-8 indent-4 max-w-[40ch] p-[5px] text-justify tracking-wider">
+        <div className=" leading-8 indent-4 max-w-[40ch] p-[5px] text-justify tracking-wider ">
           <span className="date"></span>
           <span>
             {" "}

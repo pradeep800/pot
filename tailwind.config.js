@@ -6,6 +6,7 @@ module.exports = {
         red: ["Red Hat Mono"],
         cool: ["Rubik Bubbles"],
         writing: ["Nunito"],
+        spacing: ["Source Code Pro"],
       },
       animation: {
         uptodown: "uptodown 1.6s ease-out  normal forwards",
