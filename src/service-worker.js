@@ -66,12 +66,7 @@ registerRoute(
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 const version = 1;
 let allfile = `all-file-${version}`;
-self.addEventListener("message", (event) => {
-  console.log("something here");
-  if (event.data && event.data.type === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
-});
+self.addEventListener("message", (event) => {});
 self.addEventListener("install", (ev) => {
   self.skipWaiting();
 });
@@ -87,7 +82,6 @@ self.addEventListener("activate", (ev) => {
         .map((key) => caches.delete(key));
     })
   );
-  self.skipWaiting();
 });
 self.addEventListener("fetch", (ev) => {
   ev.respondWith(
