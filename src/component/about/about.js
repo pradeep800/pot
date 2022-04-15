@@ -11,7 +11,7 @@ export default function About() {
     setInterval(() => {
       let time = diffYMDHMS(moment(Date.now()), moment([2003, 6, 9]));
       let age =
-        "i am " +
+        "I'm " +
         time.years +
         " years " +
         time.months +
