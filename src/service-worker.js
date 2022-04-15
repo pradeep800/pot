@@ -96,7 +96,7 @@ self.addEventListener("fetch", (ev) => {
           res ||
           fetch(ev.request).then(async (fetchresult) => {
             await caches.open(allfile).then((cache) => {
-              cache.put(ev.request, fetchresult.clone());
+              await cache.put(ev.request, fetchresult.clone());
               return fetchresult;
             });
           })
