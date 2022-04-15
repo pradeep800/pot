@@ -93,12 +93,21 @@ self.addEventListener("fetch", (ev) => {
   if (ev.request.method !== "POST") {
     ev.respondWith(
       caches.match(ev.request).then((res) => {
+        let opts = {
+          mode: ev.request.mode,
+          cache: "no-cache",
+        };
+        if (!ev.request.url.startsWith(location.origin)) {
+          //not on the same domain as my html file
+          opts.mode = "cors";
+          opts.credentials = "omit";
+        }
         return (
           res ||
-          fetch(ev.request).then(async (fetchresult) => {
+          fetch(ev.request, opts).then(async (fetchresult) => {
             caches.open(allfile).then((cache) => {
-              cache.put(ev.request, fetchresult);
-              return fetch(ev.request);
+              cache.put(ev.request, fetchresult.clone());
+              return fetchresult;
             });
           })
         );
