@@ -87,6 +87,7 @@ self.addEventListener("activate", (ev) => {
         .map((key) => caches.delete(key));
     })
   );
+  self.skipWaiting();
 });
 self.addEventListener("fetch", (ev) => {
   if (ev.request.method !== "POST") {
