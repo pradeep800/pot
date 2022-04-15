@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-white h-[100vh]">
+    <div className="bg-white h-[80vh]">
       <div className="overflow-hidden ">
         <div id="cas" className="flex box-border translate-x-0 ">
           <div>
