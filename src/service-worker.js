@@ -89,19 +89,19 @@ self.addEventListener("activate", (ev) => {
   );
 });
 self.addEventListener("fetch", (ev) => {
-  // ev.respondWith(
-  //   caches.match(ev.request).then((res) => {
-  //     return (
-  //       res ||
-  //       fetch(ev.request).then((fetchresult) => {
-  //         caches.open(allfile).then((cache) => {
-  //           cache.put(ev.request, fetchresult.clone());
-  //           return fetchresult;
-  //         });
-  //       })
-  //     );
-  //   })
-  // );
+  ev.respondWith(
+    caches.match(ev.request).then((res) => {
+      return (
+        res ||
+        fetch(ev.request).then((fetchresult) => {
+          caches.open(allfile).then((cache) => {
+            cache.put(ev.request, fetchresult.clone());
+            return fetchresult;
+          });
+        })
+      );
+    })
+  );
 });
 self.addEventListener("message", (ev) => {});
 // Any other custom service worker logic can go here.
