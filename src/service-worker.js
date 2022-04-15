@@ -82,6 +82,7 @@ self.addEventListener("activate", (ev) => {
         .map((key) => caches.delete(key));
     })
   );
+  self.clients.claim();
 });
 self.addEventListener("fetch", (ev) => {
   ev.respondWith(
