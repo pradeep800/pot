@@ -17,16 +17,18 @@ export default function About() {
         time.months +
         " months " +
         time.days +
-        " day " +
+        " days" +
         time.hours +
-        " hours " +
+        " hours" +
         time.minutes +
-        " minutes and " +
+        " minutes " +
         time.seconds +
-        " second " +
+        " seconds and " +
+        time.mili +
+        "  milliseconds " +
         "old";
       date.innerHTML = age;
-    }, 1000);
+    }, 200);
 
     function diffYMDHMS(current, birthday) {
       let duration = moment.duration(current.diff(birthday));
@@ -36,7 +38,8 @@ export default function About() {
       let hours = duration.hours();
       let minutes = duration.minutes();
       let seconds = duration.seconds();
-      return { years, months, days, hours, minutes, seconds };
+      let mili = duration.milliseconds();
+      return { years, months, days, hours, minutes, seconds, mili };
     }
     let str = ["pradeep", "coder", "student", "a proud indian"];
     let text = document.getElementById("auto-text");
@@ -61,7 +64,7 @@ export default function About() {
           first = true;
         }, 1000);
       }
-    }, 200);
+    }, 300);
   }, []);
 
   return (
@@ -70,7 +73,7 @@ export default function About() {
         <div className="pt-[20px]  ">
           Hi! i am <span id="auto-text"></span>
         </div>
-        <div className=" leading-8 indent-4 max-w-[40ch] p-4 text-justify tracking-wider">
+        <div className=" leading-8 indent-4 max-w-[40ch] p- text-justify tracking-wider">
           <span className="date"></span>
           <span>
             {" "}
