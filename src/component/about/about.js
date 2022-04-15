@@ -38,8 +38,12 @@ export default function About() {
       let hours = duration.hours();
       let minutes = duration.minutes();
       let seconds = duration.seconds();
-      let mili = duration.milliseconds();
-
+      let mili = String(duration.milliseconds());
+      if (mili.length == 1) {
+        mili = "00" + mili;
+      } else if (mili.length == 2) {
+        mili = "0" + mili;
+      }
       return { years, months, days, hours, minutes, seconds, mili };
     }
     let str = ["pradeep", "coder", "student", "a proud indian"];
