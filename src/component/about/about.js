@@ -37,8 +37,11 @@ export default function About() {
       let days = duration.days();
       let hours = duration.hours();
       let minutes = duration.minutes();
-      let seconds = duration.seconds();
+      let seconds = String(duration.seconds());
       let mili = String(duration.milliseconds());
+      if (seconds.length == 1) {
+        seconds = "0" + seconds;
+      }
       if (mili.length == 1) {
         mili = "00" + mili;
       } else if (mili.length == 2) {
