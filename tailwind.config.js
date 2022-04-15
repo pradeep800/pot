@@ -20,13 +20,13 @@ module.exports = {
             boxShadow: "0px 0px 0px",
           },
           "50%": {
-            boxShadow: "6px 8px 5px green.-6px -8px 15px green",
+            boxShadow: "6px 8px 5px gray.-6px -8px 15px gray",
           },
           "75%": {
-            boxShadow: "7px 9px 20px green,-7px -9px 20px green",
+            boxShadow: "7px 9px 20px gray,-7px -9px 20px gray",
           },
           "100%": {
-            boxShadow: "8px 10px 25px green,-8px -10px 25px green",
+            boxShadow: "8px 10px 25px gray,-8px -10px 25px gray",
           },
         },
         uptodown: {

@@ -15,53 +15,39 @@ export default function Blog({ object }) {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="w-[100vw] flex justify-center bg-green-200">
-      <div className="sm:w-[80vw] w-[100vw] lg:w-[50vw] mt-8 flex">
-        <div className="relative bg-gray-300  ">
-          <div>
-            <img
-              src={obj.img}
-              alt="i don't know what happen"
-              className="object-cover absolute w-[100vw] h-[30vh] "
-            ></img>
-            <div className="relative z-30 p-[5vh] h-[30vh] flex flex-col justify-between">
-              <h1 className="text-center text-4xl font-black  text-pink-600">
-                {obj.title}
-              </h1>
-              <p className="sm:p-4 p-1"></p>
-              <div className="flex justify-between text-red-400 text-1xl font-mono ">
-                <p>{obj.upload} </p>
-
-                <p>
-                  &nbsp;<span className="">by</span> {obj.author}
-                </p>
-              </div>
-            </div>
-            <div className="   mt-4 md:mt-8 min-h-[70vh] pr-4 md:ml-[10vh] pb-[10vh]  text-[16px]	  mx-[12px] text-justify md:mr-[10vh]  ">
-              {obj.para.map((value, index) => {
-                return (
-                  <div key={index}>
-                    <div className="indent-4 mt-4">{value}</div>
-                  </div>
-                );
-              })}
+    <div className="mb-[2rem] pt-[3rem] max-w-[40rem] m-[auto] md-[8rem]">
+      <div className="   ">
+        <div class=" ">
+          <div className="h-[5rem] flex flex-col justify-around align-between">
+            <h1 className="text-4xl  text-center text-gray-400">{obj.title}</h1>
+            <div className="flex  justify-around text-[15px] text-gray-400">
+              <p class="">{obj.upload} </p>
+              <p className="">by {obj.author}</p>
             </div>
           </div>
+          <div className="font-writing tracking-wider sm:text-lg text-justify sm:px-[3rem] p-[1rem]  leading-6 sm:leading-7">
+            {obj.para.map((value, index) => {
+              return (
+                <div className="pt-4" key={index}>
+                  <div className="indent-2">{value}</div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div className="text-center bg-gray-300 text-blue-800 mb-8 py-3 hover:text-red-300  hover:bg-gray-600"></div>
       </div>
     </div>
   );
 }
-Blog.defaultProps = {
-  object: [],
-};
-Blog.propTypes = {
-  /*
-  import PropTypes from "prop-types"
-  if there is only one object 
-  para:ProtoTypes.arrayOf(ProtoTypes.string).isRequired;
-  img:ProtoTypes.string;
-  title:ProtoTypes.string;
-  */
-};
+// {/* Blog.defaultProps = {
+//   obj: [],
+// };
+// Blog.propTypes = {
+//   /*
+//   import PropTypes from "prop-types"
+//   if there is only one object
+//   para:ProtoTypes.arrayOf(ProtoTypes.string).isRequired;
+//   img:ProtoTypes.string;
+//   title:ProtoTypes.string;
+//   */
+// }; */}

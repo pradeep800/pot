@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import "./blog.css";
 export default function Preview({ obj }) {
   return (
-    <div className="bg-gray-300 mb-[2rem] max-w-[40rem] m-[auto] md-[8rem]">
+    <div className="mb-[2rem] mt-[3rem] max-w-[40rem] m-[auto] md-[8rem]">
       <div className="   ">
         <div class="h-[90vh] overflow-hidden ">
-          <div className="something h-[12rem] flex flex-col justify-around ">
-            <h1 className="text-4xl  text-center font-black">{obj.title}</h1>
-            <div className="flex justify-around text-sm">
+          <div className="h-[5rem] flex flex-col justify-around align-between">
+            <h1 className="text-4xl  text-center text-gray-400">{obj.title}</h1>
+            <div className="flex  justify-around text-[15px] text-gray-400">
               <p class="">{obj.upload} </p>
               <p className="">by {obj.author}</p>
             </div>
@@ -23,9 +23,9 @@ export default function Preview({ obj }) {
           </div>
         </div>
       </div>
-      <div className="text-center h-[2rem] ">
+      <div className="text-center h-[2rem] hover:bg-gray-300 ">
         <Link
-          className="px-[30%]"
+          className="px-[30%] "
           to={() => {
             return `/blog/${obj.key}`;
           }}

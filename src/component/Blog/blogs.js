@@ -17,7 +17,7 @@ export default function Blogs({ obj }) {
   }
   const totalPosts = obj.length;
   return (
-    <div className="bg-green-200 overflow-hidden">
+    <div className="overflow-hidden">
       {(() => {
         return current.map((objc) => {
           return <Preview key={objc.key} obj={objc} />;

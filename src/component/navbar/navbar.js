@@ -30,7 +30,7 @@ export default function Nav() {
     };
   }, []);
   return (
-    <nav className="flex  h-[50px] fixed  z-40 sm:justify-around sm:items-center  bg-green-300 w-[100vw]">
+    <nav className="flex  h-[50px] fixed  z-40 sm:justify-around sm:items-center  w-[100vw]">
       <NavLink
         onClick={removenav}
         to="/"
@@ -47,28 +47,28 @@ export default function Nav() {
         </p>
         <div
           id="open"
-          className="bg-green-300 text-xl h-[30vh] sm:h-auto flex flex-col sm:flex-row justify-around items-end sm:justify-between sm:items-center sm:w-auto pr-[20px]"
+          className="text-xl h-[30vh] sm:h-auto flex flex-col sm:flex-row justify-around items-end sm:justify-between sm:items-center sm:w-auto pr-[20px]"
         >
           <NavLink
             onClick={removenav}
-            activeClassName="bg-green-500 rounded-lg"
-            className="text-red-800 sm:text-3xl hover:text-red-500 font-bold "
+            activeClassName="bg-gray-400 rounded-lg"
+            className=" hover:text-gray-300 sm:text-3xl font-bold "
             to="/about"
           >
             about me
           </NavLink>
           <NavLink
             onClick={removenav}
-            activeClassName="bg-green-500  rounded-lg"
-            className="text-red-800  hover:text-red-500 sm:text-3xl font-bold"
+            activeClassName="bg-gray-400 rounded-lg"
+            className="hover:text-gray-300 sm:text-3xl font-bold"
             to="/contact"
           >
             contact me
           </NavLink>
           <NavLink
             onClick={removenav}
-            activeClassName="bg-green-500  rounded-lg"
-            className="text-red-800 hover:text-red-500 sm:text-3xl font-bold"
+            activeClassName="bg-gray-400  rounded-lg"
+            className="hover:text-gray-300 sm:text-3xl font-bold"
             to="/blog"
           >
             Blogs

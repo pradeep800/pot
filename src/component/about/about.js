@@ -4,8 +4,40 @@ import img from "./pradeep.png";
 import glass from "./glass.png";
 import joint from "./joint.gif";
 import { NavLink } from "react-router-dom";
+import moment from "moment";
 export default function About() {
   useEffect(() => {
+    let date = document.getElementsByClassName("date")[0];
+    setInterval(() => {
+      let time = diffYMDHMS(moment(Date.now()), moment([2003, 6, 9]));
+      let age =
+        "i am " +
+        time.years +
+        " years " +
+        time.months +
+        " months " +
+        time.days +
+        " day " +
+        time.hours +
+        " hours " +
+        time.minutes +
+        " minutes and " +
+        time.seconds +
+        " second " +
+        "old";
+      date.innerHTML = age;
+    }, 1000);
+
+    function diffYMDHMS(current, birthday) {
+      let duration = moment.duration(current.diff(birthday));
+      let years = duration.years();
+      let months = duration.months();
+      let days = duration.days();
+      let hours = duration.hours();
+      let minutes = duration.minutes();
+      let seconds = duration.seconds();
+      return { years, months, days, hours, minutes, seconds };
+    }
     let str = ["pradeep", "coder", "student", "a proud indian"];
     let text = document.getElementById("auto-text");
     let i = 0,
@@ -33,25 +65,24 @@ export default function About() {
   }, []);
 
   return (
-    <div className="bg-green-200 h-[100vh] ">
-      <div className="h-[80vh] relative">
-        <div className="w-[100vw] flex absolute pt-[30px] justify-center">
-          <Canvas />
+    <div className="h-[80vh]   flex  flex-col justify-center">
+      <div className="  h-[20rem] flex flex-col justify-center items-center">
+        <div className="pt-[20px]">
+          Hi! i am <span id="auto-text"></span>
         </div>
-        <div className="flex flex-col items-center pt-[30px]">
-          <img src={img} className="w-[200px]"></img>
-          <img
-            src={glass}
-            className="w-[150px]  absolute right-auto animate-uptodown"
-          ></img>
-          <img
-            src={joint}
-            className="absolute w-[200px] left-[0px]  top-[95px] animate-joint sm:animate-joint2 lg:animate-joint3"
-          ></img>
-          <div id="text" className="text-2xl   font-black font-cool">
-            i am &nbsp;
-            <span id="auto-text" className="animate-pulse"></span>
-          </div>
+        <div className=" leading-8 indent-4 max-w-[40ch] text-justify tracking-wider">
+          <span className="date"></span>
+          <span>
+            {" "}
+            and I am pursuing B.Tech in computer science from{" "}
+            <a
+              href="https://uttaranchaluniversity.ac.in/"
+              className="text-blue-300 hover:text-red-300"
+              target="_blank"
+            >
+              Uttranchal University
+            </a>
+          </span>
         </div>
       </div>
     </div>
