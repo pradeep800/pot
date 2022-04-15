@@ -14,6 +14,7 @@ module.exports = {
         joint2: "joint2 1.6s ease  normal forwards",
         joint3: "joint3 1.6s ease  normal forwards",
         shadowChange: "shadowChange 2s ease-in alternate infinite",
+        pulse: "pulse 0.7s ease normal infinite",
       },
       keyframes: {
         shadowChange: {

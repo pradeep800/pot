@@ -28,7 +28,7 @@ export default function About() {
         "  milliseconds " +
         "old";
       date.innerHTML = age;
-    }, 200);
+    });
 
     function diffYMDHMS(current, birthday) {
       let duration = moment.duration(current.diff(birthday));
@@ -39,6 +39,7 @@ export default function About() {
       let minutes = duration.minutes();
       let seconds = duration.seconds();
       let mili = duration.milliseconds();
+
       return { years, months, days, hours, minutes, seconds, mili };
     }
     let str = ["pradeep", "coder", "student", "a proud indian"];
@@ -62,16 +63,20 @@ export default function About() {
             i = 0;
           }
           first = true;
-        }, 1000);
+        }, 2000);
       }
-    }, 300);
+    }, 50);
   }, []);
 
   return (
     <div className="h-[80vh]   flex  flex-col justify-center font-spacing font-black">
       <div className="  h-[20rem] flex flex-col justify-center items-center">
         <div className="pt-[20px]  ">
-          Hi! i am <span id="auto-text"></span>
+          Hi! i am{" "}
+          <span
+            className="after:w-[2px]   after:overflow-hidden after:h-[1rem] after:content-['|']  after:font-[900] after:font-xl after:animate-pulse"
+            id="auto-text"
+          ></span>
         </div>
         <div className=" leading-8 indent-4 max-w-[40ch] p-[10px] text-justify tracking-wider ">
           <span className="date"></span>
