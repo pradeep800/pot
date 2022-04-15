@@ -73,7 +73,7 @@ export default function About() {
         <div className="pt-[20px]  ">
           Hi! i am <span id="auto-text"></span>
         </div>
-        <div className=" leading-8 indent-4 max-w-[40ch] p- text-justify tracking-wider">
+        <div className=" leading-8 indent-4 max-w-[40ch] p-[5px] text-justify tracking-wider">
           <span className="date"></span>
           <span>
             {" "}
