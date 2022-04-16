@@ -9,7 +9,7 @@ export default function About() {
   useEffect(() => {
     let date = document.getElementsByClassName("date")[0];
     setInterval(() => {
-      let time = diffYMDHMS(moment(Date.now()), moment([2003, 6, 9]));
+      let time = diffYMDHMS(moment(), moment("9-6-2003", "D-M-YYYY"));
       let age =
         "I'm " +
         time.years +
