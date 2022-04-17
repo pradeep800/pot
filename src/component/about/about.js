@@ -6,6 +6,8 @@ import joint from "./joint.gif";
 import { NavLink } from "react-router-dom";
 import moment from "moment";
 export default function About() {
+  const [autotext, setautotext] = useState("");
+  const [age, setage] = useState("...");
   useEffect(() => {
     let date = document.getElementsByClassName("date")[0];
     setInterval(() => {
@@ -27,7 +29,7 @@ export default function About() {
         time.mili +
         "  milliseconds " +
         "old";
-      date.innerHTML = age;
+      setage(age);
     });
 
     function diffYMDHMS(current, birthday) {
@@ -50,13 +52,13 @@ export default function About() {
       return { years, months, days, hours, minutes, seconds, mili };
     }
     let str = ["pradeep", "coder", "student", "a proud indian"];
-    let text = document.getElementById("auto-text");
+
     let i = 0,
       j = 0;
     let p;
     let first = true;
     setInterval(() => {
-      text.innerText = str[i].substr(0, j + 1);
+      setautotext(str[i].substring(0, j + 1));
       j++;
       if (j == str[i].length) {
         j--;
@@ -83,10 +85,12 @@ export default function About() {
           <span
             className="after:w-[2px]   after:overflow-hidden after:h-[1rem] after:content-['|']  after:font-[900] after:font-xl after:animate-pulse"
             id="auto-text"
-          ></span>
+          >
+            {autotext}
+          </span>
         </div>
         <div className=" leading-8 indent-4 max-w-[40ch] p-[10px] text-justify tracking-wider ">
-          <span className="date"></span>
+          <span className="date">{age}</span>
           <span>
             {" "}
             and I'm pursuing B.Tech in computer science from{" "}
