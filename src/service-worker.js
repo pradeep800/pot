@@ -64,7 +64,7 @@ registerRoute(
 
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
-const version = 21;
+const version = 2;
 let allfile = `all-file-${version}`;
 self.addEventListener("message", (event) => {});
 self.addEventListener("install", (ev) => {
@@ -86,30 +86,31 @@ self.addEventListener("activate", (ev) => {
 });
 self.addEventListener("fetch", (ev) => {
   if (evt.request.url.indexOf("http") === 0) {
-    ev.respondWith(
-      caches.match(ev.request).then((res) => {
-        return (
-          res ||
-          Promise.resolve().then(() => {
-            let opts = {
-              mode: ev.request.mode,
-              cache: "no-cache",
-            };
-            if (!ev.request.url.startsWith(location.origin)) {
-              opts.mode = "cors";
-              opts.credentials = "omit";
-            }
-            fetch(ev.request, opts).then((fetchresult) => {
-              caches.open(allfile).then((cache) => {
-                cache.put(ev.request, fetchresult.clone());
-                return fetchresult;
-              });
-            });
-          })
-        );
-      })
-    );
+    return;
   }
+  ev.respondWith(
+    caches.match(ev.request).then((res) => {
+      return (
+        res ||
+        Promise.resolve().then(() => {
+          let opts = {
+            mode: ev.request.mode,
+            cache: "no-cache",
+          };
+          if (!ev.request.url.startsWith(location.origin)) {
+            opts.mode = "cors";
+            opts.credentials = "omit";
+          }
+          fetch(ev.request, opts).then((fetchresult) => {
+            caches.open(allfile).then((cache) => {
+              cache.put(ev.request, fetchresult.clone());
+              return fetchresult;
+            });
+          });
+        })
+      );
+    })
+  );
 });
 self.addEventListener("message", (ev) => {});
 // Any other custom service worker logic can go here.
