@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Spinner>maybe i will create something in fature..</Spinner>
+      <Spinner>maybe i will create something in future...</Spinner>
       <a className="text-blue-300" href="https://pradeepbisht.com/about">
         Goto about selection
       </a>
