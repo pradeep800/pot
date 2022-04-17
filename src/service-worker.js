@@ -100,7 +100,7 @@ self.addEventListener("fetch", (ev) => {
           }
           fetch(ev.request, opts).then((fetchresult) => {
             caches.open(allfile).then((cache) => {
-              cache.put(ev.request, fetchresult.clone());
+              cache.add(ev.request, fetchresult.clone());
               return fetchresult;
             });
           });
