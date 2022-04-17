@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 import Spinner from "../spinner/spinner";
 export default function Home() {
-  useEffect(() => {
-    let i = 0;
-    let s;
-    const cas = document.getElementById("cas");
-    function write() {
-      cas.style.transform = `translateX(-${i * 100}vw)`;
-      if (i > 2) {
-        i = -1;
-      }
-      i++;
-    }
-    s = setInterval(write, 2000);
-  }, []);
+  // useEffect(() => {
+  //   let i = 0;
+  //   let s;
+  //   const cas = document.getElementById("cas");
+  //   function write() {
+  //     cas.style.transform = `translateX(-${i * 100}vw)`;
+  //     if (i > 2) {
+  //       i = -1;
+  //     }
+  //     i++;
+  //   }
+  //   s = setInterval(write, 2000);
+  // }, []);
   return (
     <>
       <Spinner>maybe i will create something in future...</Spinner>
