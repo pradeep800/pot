@@ -30,7 +30,10 @@ export default function Nav() {
     };
   }, []);
   return (
-    <nav className="flex  h-[50px] fixed  z-40 sm:justify-around sm:items-center  w-[100vw]">
+    <nav
+      style={{ background: "rgba(255, 255, 255, 0.7)" }}
+      className="flex  h-[50px] fixed  z-40 sm:justify-around sm:items-center  w-[100vw]"
+    >
       <NavLink
         onClick={removenav}
         to="/"
