@@ -64,7 +64,7 @@ registerRoute(
 
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
-const version = 2;
+const version = 23;
 let allfile = `all-file-${version}`;
 self.addEventListener("message", (event) => {});
 self.addEventListener("install", (ev) => {
@@ -85,9 +85,7 @@ self.addEventListener("activate", (ev) => {
   self.clients.claim();
 });
 self.addEventListener("fetch", (ev) => {
-  if (evt.request.url.indexOf("http") === 0) {
-    return;
-  }
+  if (!(ev.request.url.indexOf("http") === 0)) return;
   ev.respondWith(
     caches.match(ev.request).then((res) => {
       return (
